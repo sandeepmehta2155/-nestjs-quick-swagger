@@ -1,6 +1,6 @@
 {
   "name": "nestjs-quick-swagger",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Configure Nestjs swagger in mins",
   "author": "Sandeep Mehta",
   "private": false,
