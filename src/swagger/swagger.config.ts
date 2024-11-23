@@ -1,27 +1,29 @@
 import { ConfigService } from '@nestjs/config';
 import { SwaggerConfig } from './swagger.interface';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 /**
  * Configuration for the swagger UI (found at /api).
  * Change this to suit your app!
  */
 export const SWAGGER_CONFIG: SwaggerConfig = {
-  TITLE: 'SUKSHI SWAGGER',
-  DESCRIPTION: 'SUKSHI API',
-  VERSION: '1.0',
-  TAGS: ['Template'],
+  TITLE: process.env.SWAGGER_TITLE,
+  DESCRIPTION: process.env.SWAGGER_DESCRIPTION,
+  VERSION: process.env.SWAGGER_VERSION,
+  TAGS: (process.env.SWAGGER_TAGS as unknown as string[]) ?? ['API'],
 };
 
 const customFavicon = (app) => {
   const configService = app.get(ConfigService);
-  return `${configService.get('APP_ORIGIN')}/swagger/sal.svg`;
+  return `${configService.get('APP_ORIGIN')}/swagger/img.svg`;
 };
 const customCss = (app) => {
   const configService = app.get(ConfigService);
   return `
   .topbar-wrapper { content:url('${configService.get(
     'APP_ORIGIN',
-  )}/swagger/sal.svg'); width:242px; height:auto; }`;
+  )}/swagger/img.svg'); width:242px; height:auto; }`;
 };
 
 const swaggerOptions = {
