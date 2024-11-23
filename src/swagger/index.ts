@@ -15,7 +15,7 @@ export function createDocument(app: INestApplication): OpenAPIObject {
     basicAuth({
       challenge: true,
       users: {
-        sukshi: process.env.SWAGGER_PASSWORD,
+        [process.env.SWAGGER_AUTH_USERNAME]: process.env.SWAGGER_AUTH_PASSWORD,
       },
     }),
   );
@@ -37,7 +37,7 @@ export function createDocument(app: INestApplication): OpenAPIObject {
       process.env.SWAGGER_CONTACT_EMAIL,
       process.env.SWAGGER_CONTACT_URL,
     )
-    .setExternalDoc('Project on Gitlab', process.env.SWAGGER_PROJECT_DETAILS)
+    .setExternalDoc('Project on Github', process.env.SWAGGER_PROJECT_DETAILS)
     .setVersion(SWAGGER_CONFIG.VERSION)
     .addServer(process.env.SWAGGER_LOCAL_ENDPOINT, 'local env')
     .addServer(process.env.SWAGGER_STAG_ENDPOINT, 'stag env');
