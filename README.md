@@ -21,10 +21,10 @@
 
 ```bash
 # Using npm
-$ npm install nestjs-quick-swagge --save
+$ npm install nestjs-quick-swagger --save
 
 # Using yarn
-$ yarn add nestjs-quick-swagge
+$ yarn add nestjs-quick-swagger
 ```
 
 ## Resources
