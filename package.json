@@ -1,9 +1,9 @@
 {
-  "name": "@nestjs/quick-swagger",
+  "name": "nestjs-quick-swagger",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
+  "description": "Configure Nestjs swagger in mins",
+  "author": "Sandeep Mehta",
+  "private": false,
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
