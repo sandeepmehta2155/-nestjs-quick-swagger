@@ -57,3 +57,5 @@ export function createDocument(app: INestApplication): OpenAPIObject {
 
   return document;
 }
+
+export * from './swagger.config';

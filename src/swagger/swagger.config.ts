@@ -11,7 +11,9 @@ export const SWAGGER_CONFIG: SwaggerConfig = {
   TITLE: process.env.SWAGGER_TITLE,
   DESCRIPTION: process.env.SWAGGER_DESCRIPTION,
   VERSION: process.env.SWAGGER_VERSION,
-  TAGS: (process.env.SWAGGER_TAGS as unknown as string[]) ?? ['API'],
+  TAGS: (process.env.SWAGGER_TAGS.split(', ') as unknown as string[]) ?? [
+    'API',
+  ],
 };
 
 const customFavicon = (app) => {

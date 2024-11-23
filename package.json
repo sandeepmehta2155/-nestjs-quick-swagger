@@ -1,15 +1,13 @@
 {
   "name": "nestjs-quick-swagger",
-  "version": "0.0.8",
+  "version": "0.1.5",
   "description": "Configure Nestjs swagger in mins",
   "author": "Sandeep Mehta",
   "private": false,
   "license": "UNLICENSED",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "index.js"],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
