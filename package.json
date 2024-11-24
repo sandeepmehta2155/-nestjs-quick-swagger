@@ -1,6 +1,6 @@
 {
   "name": "nestjs-quick-swagger",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Configure Nestjs swagger in mins",
   "author": "Sandeep Mehta",
   "private": false,
@@ -9,7 +9,8 @@
   "types": "dist/index.d.ts",
   "files": ["dist", "index.js"],
   "scripts": {
-    "build": "nest build",
+    "copy-assets": "cp -r assets dist/",
+    "build": "nest build && npm run copy-assets",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
