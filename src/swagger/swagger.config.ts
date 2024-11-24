@@ -16,11 +16,11 @@ export const SWAGGER_CONFIG: SwaggerConfig = {
 };
 
 const customFavicon = () => {
-  return process.env.SWAGGER_ASSETS_URL + `/assets/img.svg`;
+  return process.env.SWAGGER_ASSETS_URL;
 };
 const customCss = () => {
   return `
-  .topbar-wrapper { content:url(' ${process.env.SWAGGER_ASSETS_URL} + /assets/img.svg'); width:242px; height:auto; }`;
+  .topbar-wrapper { content:url(' ${process.env.SWAGGER_ASSETS_URL} '); width:242px; height:auto; }`;
 };
 
 const swaggerOptions = {
