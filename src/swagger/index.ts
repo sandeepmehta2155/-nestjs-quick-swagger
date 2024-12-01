@@ -59,3 +59,4 @@ export function createDocument(app: INestApplication): OpenAPIObject {
 }
 
 export * from './swagger.config';
+export * from './api-description.decorator';
